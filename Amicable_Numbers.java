@@ -1,23 +1,25 @@
 import java.util.Scanner;
-class Code
+class code
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,m,i,sum=0;
-        m=sc.nextInt();
+        int i,n,m,j,count=0,count1=0;
         n=sc.nextInt();
-        for(i=1;i<m;i++)
+        m=sc.nextInt();
+        for(i=1;i<=n;i++)
         {
-            if(m%i==0)
-            {
-            sum=sum+i;
-            }
+            if(n%i==0)
+            count=count+i;
         }
-        if(sum==n)
+        for(j=1;j<=m;j++)
         {
-         System.out.println("Amicable");
+            if(m%j==0)
+            count1=count1+j;
         }
+        if((count==count1) && (count1==count))
+
+            System.out.print("Amicable");
         else
         System.out.println("Not Amicable");
     }
