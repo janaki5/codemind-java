@@ -1,15 +1,19 @@
 import java.util.Scanner;
-class Code
-{
+class code
+{ 
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
-        int n;
-        n=sc.nextInt();
-        double d=Math.sqrt(n);
-        if((d-(int)d>0))
-         System.out.println("False");
-        else
-        System.out.println("True");
+    Scanner sc=new Scanner(System.in);
+    int n;
+    float d, t;
+    n=sc.nextInt();
+    t=(float)Math.sqrt(n);
+    d=t-(int)t;
+    if(d==0)
+    System.out.println("True");
+    else
+    System.out.println("False");
+    
+    
     }
 }
