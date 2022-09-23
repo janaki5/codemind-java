@@ -1,52 +1,47 @@
 import java.util.Scanner;
-class NearestPrime
+class Code
 {
-  public static boolean isPal(int n)
-  {
-      int temp=n,sum=0,r;
-      while(n>0)
-      {
-          r=n%10;
-          sum=sum*10+r;
-          n=n/10;
-      }
-      if(sum==temp)
-       return true;
-      else 
-       return false;
-  }
-  public static void main(String args[])
-  {
-      
-     Scanner sc=new Scanner(System.in);
-	 int n,i,d1,d2;
-         n=sc.nextInt();
-         
-	 for(i=n-1;;i--)
-	 {
-	     if(isPal(i))
-		 {
-		   d1=i;
-                   break;
-		 }
-	 } 
-	for(i=n+1;;i++)
-	 {
-	     if(isPal(i))
-		 {
-		   d2=i;
-                   break;
-		 }
-	 } 
-        
-        if((n-d1)==(d2-n))
-            System.out.println(d1+" "+d2);
-        else if((n-d1)<(d2-n))
-            System.out.println(d1);
+    public static boolean ispal(int n)
+    {
+        int r=0,d=0,temp;
+        temp=n;
+        while(n!=0)
+        {
+        r=n%10;
+        d=d*10+r;
+        n=n/10;
+        }
+        if(d==temp)
+        return true;
         else
-            System.out.println(d2);
-        
-  }
-  
+        return false;
+        }
+        public static void main(String args[])
+        {
+            Scanner sc=new Scanner(System.in);
+            int n,i,a=0,b=0;
+            n=sc.nextInt();
+            for(i=n+1;;i++)
+            {
+                if(ispal(i))
+                {
+                 a=i;
+                 break;
+                }
+            }
+            for(i=n-1;;i--)
+            {
+                if(ispal(i))
+                {
+                 b=i;
+                 break;
+                }
+            }
+            if(n-b>a-n)
+            System.out.println(a);
+            else if(n-b<a-n)
+            System.out.println(b);
+            else
+            System.out.println(b+" "+a);
+        }
 }
-
