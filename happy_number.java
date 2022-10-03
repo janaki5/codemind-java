@@ -2,9 +2,7 @@ import java.util.Scanner;
 class HappyNumber  
 {     
     public static int isHappyNumber(int num){  
-        int rem = 0, sum = 0;  
-          
-        
+        int rem = 0, sum = 0;
         while(num > 0){  
             rem = num%10;  
             sum = sum + (rem*rem);  
@@ -14,7 +12,7 @@ class HappyNumber
     }  
       
     public static void main(String[] args) {  
-        int num ;
+        int num;
         Scanner sc=new Scanner(System.in);
         num=sc.nextInt();
         int result = num;  
@@ -23,9 +21,8 @@ class HappyNumber
             result = isHappyNumber(result);  
         }  
           
-         
         if(result == 1)  
-            System.out.println( "True");  
+            System.out.println("True");  
         else if(result == 4)  
             System.out.println("False");     
     }  
