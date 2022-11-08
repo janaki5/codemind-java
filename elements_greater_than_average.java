@@ -1,30 +1,25 @@
-import java.util.Scanner;
-class Code
+import java.util.*;
+class Main
 {
     public static void main(String args[])
     {
-        int a,sum=0,c=0,co=0;
-        float avg=0;
-        Scanner sc=new Scanner(System.in);
-        a=sc.nextInt();
-        int b[]=new int[a];
-        for(int i=0;i<a;i++)
-        {
-         b[i]=sc.nextInt();
-        }
-        for(int i=0;i<a;i++)
-        {
-            sum=sum+b[i];
-        }
-        c=sum/a;
-        
-        for(int j=0;j<a;j++)
-        {
-            if(b[j]>=c)
-            {
-                co++;
-            }
-        }
-        System.out.print(co+" ");
+       Scanner sc=new Scanner(System.in);
+       int n,arr[],avg,c=0,sum=0;
+       n=sc.nextInt();
+       arr=new int[n];
+       for(int i=0;i<n;i++)
+       {
+           arr[i]=sc.nextInt();
+           sum=sum+arr[i];
+       }
+       avg=(int)sum/n;
+       for(int i=0;i<n;i++)
+       {
+           if(arr[i]>=avg)
+           {
+               c++;
+           }
+       }
+       System.out.print(c);
     }
 }
