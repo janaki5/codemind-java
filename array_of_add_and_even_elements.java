@@ -1,29 +1,22 @@
-import java.util.Scanner;
-class Code
+import java.util.*;
+class EvenElementsFollowedByOdd
 {
     public static void main(String args[])
     {
-        int n;
-        Scanner sc=new Scanner(System.in);
-        n=sc.nextInt();
-        int a[]=new int[n];
-        for(int i=0;i<n;i++)
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int N = sc.nextInt();
+        for(int i=0; i<N; i++)
         {
-         a[i]=sc.nextInt();
+            list.add(sc.nextInt());
+            if(list.get(i)%2 != 0)
+                System.out.print(list.get(i) + " ");
         }
-        for(int i=0;i<n;i++)
+        for(int i: list)
         {
-            if(a[i]%2!=0)
-            {
-                System.out.print(a[i]+" ");
-            }
+            if(i%2 == 0)
+                System.out.print(i + " ");
         }
-        for(int j=0;j<n;j++)
-        {
-            if(a[j]%2==0)
-            {
-                System.out.print(a[j]+" ");
-            }
-        }
+        sc.close();
     }
 }
